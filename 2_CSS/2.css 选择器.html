@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css选择器</title>
+    <style>
+        *{
+            color: blueviolet;
+        }
+        ol{
+            color: crimson;
+        }
+        #H{
+            color: chartreuse;
+            font-size: 100px;
+            font-style: italic;
+        }
+        h1{
+            color: black;
+            font-size: 20px;
+        }
+        .item{
+            color: coral;
+        }
+        /* #div1 p{
+            color: darkgreen;
+        } */
+        #div1>p{
+            color:maroon;
+            font-style: italic;
+            font-size: 100px;
+        }
+        input[name]{
+            background: maroon;
+        }
+        input[type=password]{
+            border: mediumslateblue solid 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="H">item 1</h1>
+    <h1>item 2</h1>
+    <h1>item 3</h1>
+    <ol>
+        <li class="item">item 1</li>
+        <li class="item">item 2</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+        
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+    </ul>
+    
+    <div id="div1">
+        <p>aaa</p>
+        <div>111
+            <p>bbb</p>
+        </div>
+        <p>
+           111
+        </p>
+    </div>
+
+    <input type="text" name="userword" value="123">
+    <input type="password" name="password">
+    <input type="text">
+
+    
+</body>
+</html>
