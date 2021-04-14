@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        #ul1 li{
+            color:blue;
+            float: left;
+            margin-right: 100px;
+            width: 100px;
+            
+        }   
+        #ul1 a:hover{
+            color: coral;
+            background: cornflowerblue;
+        }
+        #ul1 li{
+            border-right: black solid 1px;
+        }
+        #sel a:hover{
+            color: orchid;
+        }
+        #aaa{
+            color:red;
+        }
+        #bbb span{
+            color: violet;
+        }
+
+        #ccc :first-child{
+            color: blueviolet;
+        }
+
+        #ccc p:nth-child(2){
+            background: chartreuse;
+        }
+
+        #ul1::before{
+            content:'haha';
+            color: teal;
+        }
+    </style> 
+</head>
+<body>
+    
+    <select name="internet" id="sel">
+        <option value=""><a href="http://www.baidu.com">百度</a></option>
+        <option value=""><a href="http://css.doyoe.com/">css参考手册</a></option>
+        <option value=""><a href="https://www.w3school.com.cn/html/index.asp">w3school</a></option>
+    </select>
+
+    <ul id="ul1">
+        <li><a href="http://www.baidu.com">百度</a></li>
+        <li><a href="http://css.doyoe.com/">css参考手册</a></li>
+        <li><a href="https://www.w3school.com.cn/html/index.asp">w3school</a></li>
+    </ul> 
+
+    <ul id="aaa">
+        <div>d1</div>
+        <p>p1</p>
+        <div>d2</div>
+        <div>d3</div>
+    </ul>
+    <!-- p里面不能嵌套div和p，能嵌套行元素 -->
+        <p id="bbb">
+        <!-- <span>1111</span>
+        <div>d1</div> -->
+
+        <p>p1</p>
+        <div>d2</div>
+        <div>d3</div>
+    </p>
+
+    <ol id="ccc">
+        <div>0001</div>
+        <p>000p</p>
+        <div>0002</div>
+        <div>0003</div>
+    </ol>
+</body>
+</html>

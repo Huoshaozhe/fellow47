@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 18px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>css常见样式</title>
+    <style>
+        
+        #h{
+            color: rgb(29, 50, 19);
+            color: rgba(39,18,28,0.2);
+            color:#ff00aa;
+        } 
+        
+        /* 第一个div不能两个百分数 */
+        #div1{
+            background: #ff1200;
+            height: 600px;
+            width: 50%;
+        }
+
+        #div2{
+            background:#008900;
+            height: 50%;
+            width: 50%;
+        }
+
+
+        #div4{
+            font-size: 2rem;
+        }
+
+        #div5{
+            background: #343434;
+            height: 200px;
+            width: 50%;
+            min-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h">这是h1</h1>
+    <h2>这是h2</h2>
+    <h3>这是h3</h3>
+
+    <p>这是P</p>
+    <div id="div1">
+        <div id="div2">
+        </div>
+    </div>
+
+    <div id="div3">
+        这是div3
+        <div id="div4">
+            这是div4
+        </div>
+        <div id="div5"></div>
+    </div>
+</body>
+</html>
