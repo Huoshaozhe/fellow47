@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+
+        #a {
+            background-color: #ff0000;
+        }
+
+        #b {
+            background: #00ff00;
+            /* 相对定位：原来所占的空间不释放 */
+            /* position: relative;
+             left: 50px;
+            top: 50px; */
+            /* 默认值，相当于没有定位 */
+            /* position: static; */
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            z-index: 0;
+
+        }
+
+        #c {
+            background: #0000ff;
+        }
+
+        #outer {
+            width: 800px;
+            height: 500px;
+            background: #ccc;
+            /* margin-top: 50px;
+            margin-left: 50px; */
+            position:absolute;
+            left: 50px;
+            top: 50px;
+            
+        }
+        body{
+            height: 2800px;
+        }
+        #fix{
+            width: 50px;
+            height: 50px;
+            background: #ccc;
+            /* 固定窗口:空间释放，相对于可视窗口 */
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+        #banner{
+            width: 100vw;
+            height: 300px;
+            background: #000;
+        }
+
+        #nav{
+            height: 80px;
+            width: 100vw;
+            background: #ccc;
+            /* 粘性定位(relative+fixed) */
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner"></div>
+    <div id="outer">
+        <div id="a">div1</div>
+        <div id="b">div2</div>
+        <div id="c">div3</div>
+    </div>
+    <div id="fix">123</div>
+    <div id="nav"></div>
+
+
+</body>
+
+</html>

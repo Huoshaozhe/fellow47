@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        /* 浮动后元素空间会被释放 */
+        .box{
+            width: 200px;
+            height: 200px;
+            float: right;
+        }
+        #div1 {
+            background-color: #ff0000;
+        }
+
+        #div2 {
+            background: #00ff00;
+            
+        }
+
+        #div3 {
+            background: #0000ff;
+        }
+
+        #div4{
+            height: 200px;
+            width: 200px;
+            background: #cccccc;
+            
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+     
+        
+
+        ul{
+            background: #00ff00;
+            /* height: 100px; */
+            /* overflow: hidden; */
+        }
+        /* 子元素浮动使得父元素高度塌陷 */
+        li{
+            float: left;
+            list-style: none;
+            width: 100px;
+        }
+        /* .clear{
+            clear: both;
+        } */
+
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* #aaa{
+            float: none;
+            clear:both;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <div id="div1" class="box">item1</div>
+    <div id="div2" class="box">item2</div>
+    <div id="div3" class="box">item3</div> -->
+    
+    <ul class="clearfix">
+        <li><a href="">页面1</a></li>
+        <li><a href="">页面2</a></li>
+        <li><a href="">页面3</a></li>
+        <div class="clear"></div>
+        <!-- <li class="aaa">111</li> -->
+    </ul>
+    <div id="div4">
+        <img src="../2.jpg" alt="">
+        <div id="div5">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+    </div>
+</body>
+</html>

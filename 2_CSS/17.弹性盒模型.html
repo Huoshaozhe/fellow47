@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒模型</title>
+    <style>
+        #box1{
+            width: 600px;
+            height: 600px;
+            
+            background: #ccc;
+            /* 让该元素是弹性盒子 */
+            display: flex;
+            /* 决定主轴的方向 */
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* 设置交叉轴（决定了元素换行的方向） */
+            /* flex-wrap:wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* justify-content:决定了沿着主轴方向怎么排列 */
+            /* 两端对齐 */
+            /* justify-content:space-between; */
+            /* align-items: 决定了弹性项目沿交叉轴方向怎么排列 */
+            align-items:center;
+            /* align-content: 决定了主轴在交叉轴方向的分布方式 ,当只有一个主轴的时候没用*/
+            /* align-content:center; */
+            
+        }
+        .item{
+            /* margin: 0 20px; */
+            /* padding: 0 20px; */
+            /* border: 5px solid #000; */
+            width: 150px;
+            height: 100px;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+    
+        }
+        #item1{
+            background: #837145;
+        }
+        #item2{
+            font-size: 24px;
+            /* height: 200px; */
+            background: #d3fa85;
+            order: 1;
+            
+        }
+        #item3{
+            width: 300px;
+            background: #ff71a5;
+            flex-basis: 200px;
+        }
+        #item4{
+            background: #8371aa;
+            /* align-self:flex-start; */
+        }
+        #item5{
+            background: #acfca5;
+        }
+        #item6{
+            background: #dd7145;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div class="item" id="item1">item 1</div>
+        <div class="item" id="item2">item 2</div>
+        <div class="item" id="item3">item 3</div>
+        <div class="item" id="item4">item 4</div>
+        <div class="item" id="item5">item 5</div>
+        <!-- <div class="item" id="item6">item 6</div> -->
+    </div>
+</body>
+</html>
